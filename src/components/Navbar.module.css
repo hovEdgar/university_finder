@@ -1,0 +1,19 @@
+.navbar {
+    height: 12vh;
+    width: 100%;
+    background-color: #42246E;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 5px gray;
+}
+
+.navbar > h1 {
+    color: #ffffff;
+    text-shadow: 2px 3px 1px #ffa900;
+    font-size: 3rem;
+    font-family: Armfrankenstein, serif;
+}

@@ -1,0 +1,22 @@
+.container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.container > h3, a {
+    color: darkred;
+    font-family: "Agency FB", serif;
+}
+
+.container > p, h4 {
+    color: #ffb007;
+    text-shadow: 0 1px 3px darkred;
+}
+
+.container > p > a {
+    text-decoration: none;
+    font-size: 20px;
+}
