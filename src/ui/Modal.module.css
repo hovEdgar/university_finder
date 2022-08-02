@@ -1,0 +1,85 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+    position: fixed;
+    top: 5vh;
+    left: 5%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #9bf3d6;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+    animation: slide-down 300ms ease-out forwards;
+}
+
+.modal > h4 {
+    text-shadow: none;
+    color: #42246E;
+    text-align: center;
+    font-family: "Candara Light", serif;
+    font-size: large;
+}
+
+.instruction {
+    width: 70%;
+    margin: 10px;
+    color: #42246E;
+}
+
+.instruction > ol li {
+    font-family: "Candara Light", serif;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.modal > p, a {
+    color: red;
+    margin-bottom: 10px;
+    font-family: "Candara Light", serif;
+    font-weight: bolder;
+}
+
+.modal > button {
+    width: 20%;
+    height: 5vh;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background-color: #f0ba50;
+    color: #42246E;
+    font-size: 100%;
+    font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+    .modal {
+        width: 40rem;
+        left: calc(50% - 20rem);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

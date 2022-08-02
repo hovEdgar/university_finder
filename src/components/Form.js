@@ -1,16 +1,16 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useCallback} from "react";
 
 import classes from "./Form.module.css";
 
-const Form = props => {
+const Form = ({setUniversityList}) => {
     const [countryName, setCountryName] = useState("");
     const [errorMessage, setErrorMessage] = useState(null);
 
 
-    const onSearchHandler = event => {
+    const onSearchHandler = useCallback(event => {
         setErrorMessage(null);
         setCountryName(event.target.value);
-    };
+    }, []);
 
     useEffect(() => {
         const timerId = setTimeout(() => {
@@ -26,7 +26,6 @@ const Form = props => {
 
             updatedName = updatedName.join("+");
 
-            console.log(updatedName)
             if (updatedName.includes("++")) {
                 setErrorMessage("Please remove extra spaces from name");
                 return;
@@ -38,7 +37,7 @@ const Form = props => {
                     if (resData.length === 0) {
                         setErrorMessage("Not result found, please try again");
                     } else {
-                        props.setUniversityList(resData);
+                        setUniversityList(resData);
                     }
                 }).catch(err => {
                 setErrorMessage(err.message);
@@ -46,7 +45,7 @@ const Form = props => {
         }, 300);
 
         return () => clearTimeout(timerId);
-    }, [countryName, props])
+    }, [countryName, setUniversityList])
 
     const onFormSubmit = event => {
         event.preventDefault();
