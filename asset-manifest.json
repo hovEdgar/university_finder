@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/university_finder/static/css/main.0db94fc2.css",
+    "main.css": "/university_finder/static/css/main.3c4bd2e3.css",
     "main.js": "/university_finder/static/js/main.30bab704.js",
     "index.html": "/university_finder/index.html",
-    "main.0db94fc2.css.map": "/university_finder/static/css/main.0db94fc2.css.map",
+    "main.3c4bd2e3.css.map": "/university_finder/static/css/main.3c4bd2e3.css.map",
     "main.30bab704.js.map": "/university_finder/static/js/main.30bab704.js.map"
   },
   "entrypoints": [
-    "static/css/main.0db94fc2.css",
+    "static/css/main.3c4bd2e3.css",
     "static/js/main.30bab704.js"
   ]
 }
